@@ -1,0 +1,97 @@
+<!-- broj indeksa: 177 -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script>
+
+
+</script>
+
+<style>
+    .spoljni {
+        width: 100%;
+      display: flex;
+
+/*redoslijed*/
+      /*flex-direction: column-reverse; */
+      /*flex-direction: column;*/
+      flex-direction: row;
+      /*flex-direction: row-reverse;*/
+
+/*ponasanje unutrasnjih*/
+     /* flex-wrap: wrap;*/ /*u ovom slucaju izbacite width u procentima iz unutrasnjih elementa*/
+      flex-wrap: nowrap;
+      
+/*justify*/
+      /*justify-content: center;
+    justify-content: flex-start;
+      justify-content: flex-end;
+      justify-content: space-around;*/
+      justify-content: space-between;
+
+      background-color: lightblue;
+    }
+    
+    .spoljni > .unutrasnji {
+      background-color: lightcyan;
+      width: 20%;
+      margin: 10px;
+      padding: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<button onclick="podaci()">Primi</button>
+
+
+<div class="spoljni" id="spoljni">
+    <!-- <div class="unutrasnji">
+      <h4>1. Unutrasnji</h4>
+    </div>
+    <div class="unutrasnji">
+      <h4>2. Unutrasnji</h4>
+    </div> 
+    <div class="unutrasnji">
+      <h4>3. Unutrasnji</h4>
+    </div>
+    <div class="unutrasnji">
+      <h4>4. Unutrasnji</h4>
+    </div> -->
+  </div>
+
+  <div class="narudzba">
+      <label for="ime">Ime</label>
+      <input type="text" name="ime" id="ime">
+      <br>
+      <label for="prezime">Prezime</label>
+      <input type="text" name="prezime" id="prezime">
+      <br>
+      <label for="adresa">Adresa</label>
+      <input type="text" name="adresa" id="adresa">
+      <br>
+      <label for="putovanjeID">ID putovanja</label>
+      <input type="text" name="putovanjeID" id="putovanjeID" readonly>
+      <br>
+      <label for="komada">Komada</label>
+      <input type="number" name="komada" id="komada">
+      <br>
+      <label for="email">kontakt e-mail</label>
+      <input type="text" name="email" id="email">
+      <br>
+      <button onclick="posaljiNarudzbu()">Izvrsi rezervaciju</button>
+
+  </div>
+  <br>
+  <h1>DODATNA FUNKCIONALNOST</h1>
+  <button onclick="budgetSave()">Budget save</button>
+  <br>
+  <h1 id='najjeftinijePutovanje'>Klikni na dugme za prikaz naziva i cijene najjeftinijeg putovanja</h1>
+</body>
+<script src="./script.js"></script>
+</html>
